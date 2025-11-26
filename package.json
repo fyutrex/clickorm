@@ -1,6 +1,6 @@
 {
   "name": "@clickorm/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Production-grade, type-safe ORM for ClickHouse with full TypeScript support",
   "type": "module",
   "main": "./dist/index.cjs",
