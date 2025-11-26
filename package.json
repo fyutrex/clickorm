@@ -1,80 +1,81 @@
 {
-    "name": "@clickorm/core",
-    "version": "0.1.5",
-    "description": "Production-grade, type-safe ORM for ClickHouse with full TypeScript support",
-    "type": "module",
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "import": "./dist/index.js",
-            "require": "./dist/index.cjs"
-        },
-        "./*": {
-            "types": "./dist/*.d.ts",
-            "import": "./dist/*.js",
-            "require": "./dist/*.cjs"
-        }
+  "name": "@clickorm/core",
+  "version": "1.0.1",
+  "description": "Production-grade, type-safe ORM for ClickHouse with full TypeScript support",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "build": "tsup src/index.ts --format esm,cjs --dts --clean",
-        "dev": "tsup src/index.ts --format esm --watch",
-        "test": "jest --config jest.config.cjs",
-        "test:coverage": "jest --config jest.config.cjs --coverage",
-        "test:watch": "jest --config jest.config.cjs --watch",
-        "lint": "eslint src",
-        "lint:fix": "eslint src --fix",
-        "typecheck": "tsc --noEmit",
-        "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"examples/**/*.ts\"",
-        "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
-        "prepublishOnly": "npm run typecheck && npm run lint && npm run test && npm run build"
-    },
-    "keywords": [
-        "clickhouse",
-        "orm",
-        "typescript",
-        "type-safe",
-        "database",
-        "query-builder",
-        "sql"
-    ],
-    "author": "ClickORM Contributors",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/clickorm/core.git"
-    },
-    "bugs": {
-        "url": "https://github.com/clickorm/core/issues"
-    },
-    "homepage": "https://github.com/clickorm/core#readme",
-    "engines": {
-        "node": ">=20.0.0"
-    },
-    "dependencies": {
-        "@clickhouse/client": "^1.0.0"
-    },
-    "devDependencies": {
-        "@types/jest": "^29.5.11",
-        "@types/node": "^20.10.6",
-        "@typescript-eslint/eslint-plugin": "^7.18.0",
-        "@typescript-eslint/parser": "^7.18.0",
-        "eslint": "^8.56.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-prettier": "^5.1.2",
-        "jest": "^29.7.0",
-        "prettier": "^3.1.1",
-        "ts-jest": "^29.1.1",
-        "ts-node": "^10.9.2",
-        "tsup": "^8.0.1",
-        "typescript": "^5.4.0"
-    },
-    "peerDependencies": {
-        "@clickhouse/client": "^1.0.0"
-    },
-    "publishConfig": {
-        "access": "public"
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs"
     }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "test": "jest --config jest.config.cjs",
+    "test:coverage": "jest --config jest.config.cjs --coverage",
+    "test:watch": "jest --config jest.config.cjs --watch",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"examples/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
+  "keywords": [
+    "clickhouse",
+    "orm",
+    "typescript",
+    "type-safe",
+    "database",
+    "query-builder",
+    "sql"
+  ],
+  "author": "ClickORM Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fyutrex/clickorm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fyutrex/clickorm/issues"
+  },
+  "homepage": "https://github.com/fyutrex/clickorm#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "peerDependencies": {
+    "@clickhouse/client": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
