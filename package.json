@@ -1,6 +1,6 @@
 {
-  "name": "@clickorm/core",
-  "version": "1.0.1",
+  "name": "@fyutrex/clickorm",
+  "version": "1.0.2",
   "description": "Production-grade, type-safe ORM for ClickHouse with full TypeScript support",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -44,7 +44,7 @@
     "query-builder",
     "sql"
   ],
-  "author": "ClickORM Contributors",
+  "author": "Fyutrex Team",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -61,6 +61,7 @@
     "@clickhouse/client": "^1.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.10.6",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
