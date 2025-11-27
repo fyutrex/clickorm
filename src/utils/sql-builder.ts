@@ -36,6 +36,14 @@ export class SQLBuilder {
     } else if (typeof value === 'boolean') {
       // Convert booleans to integers
       paramValue = value ? 1 : 0;
+    } else if (
+      typeof value === 'object' &&
+      value !== null &&
+      !Array.isArray(value) &&
+      !(value instanceof Date)
+    ) {
+      // JSON-stringify objects for ClickHouse JSON fields
+      paramValue = JSON.stringify(value);
     }
 
     this.parameters.push(paramValue);
@@ -317,6 +325,11 @@ export class SQLBuilder {
    * Infer ClickHouse type from JavaScript value for parameterization
    */
   private inferClickHouseType(value: unknown, originalValue?: unknown): string {
+    // If original value was a boolean, it should be UInt8 even after conversion to number
+    if (originalValue !== undefined && typeof originalValue === 'boolean') {
+      return 'UInt8';
+    }
+
     // If original value was a Date, it's DateTime even after conversion to number
     if (originalValue instanceof Date) {
       return 'DateTime';
