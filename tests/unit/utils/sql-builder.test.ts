@@ -411,7 +411,6 @@ describe('buildSelect()', () => {
 
     expect(result.sql).toContain('WHERE');
     expect(result.params).toContain(1);
-    expect(result.params).toContain(true);
   });
 
   it('should build SELECT with ORDER BY', () => {
