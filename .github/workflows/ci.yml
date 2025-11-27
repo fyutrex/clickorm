@@ -17,7 +17,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -31,11 +31,11 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
-      - name: Run linter
+      - name: Lint
         run: pnpm lint
 
-      - name: Run tests
+      - name: Test
         run: pnpm test
 
-      - name: Build package
+      - name: Build
         run: pnpm build
