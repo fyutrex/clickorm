@@ -353,4 +353,4 @@ Contributions are welcome! Please read our contributing guidelines before submit
 
 ---
 
-**Note**: This project is currently in active development. The API may change before v1.0.0.
+**Note**: This project is currently in active development. The API may change before v1.0.5.
