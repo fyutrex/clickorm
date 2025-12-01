@@ -1,6 +1,6 @@
 {
   "name": "@fyutrex/clickorm",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Production-ready, type-safe ORM for ClickHouse with comprehensive TypeScript support, relations, lifecycle hooks, auto-migration, and MongoDB-style query compatibility. Designed to rival Sequelize in robustness and TypeORM in type safety.",
   "type": "module",
   "main": "./dist/index.cjs",
