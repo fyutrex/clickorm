@@ -7,8 +7,8 @@ module.exports = {
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
-    '^@clickorm/core$': '<rootDir>/src/index.ts',
-    '^@clickorm/core/(.*)$': '<rootDir>/src/$1',
+    '^@fyutrex/clickorm$': '<rootDir>/src/index.ts',
+    '^@fyutrex/clickorm/(.*)$': '<rootDir>/src/$1',
   },
   transform: {
     '^.+\\.ts$': [

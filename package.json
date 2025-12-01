@@ -1,7 +1,7 @@
 {
   "name": "@fyutrex/clickorm",
   "version": "1.0.5",
-  "description": "Production-grade, type-safe ORM for ClickHouse with full TypeScript support",
+  "description": "Production-ready, type-safe ORM for ClickHouse with comprehensive TypeScript support, relations, lifecycle hooks, auto-migration, and MongoDB-style query compatibility. Designed to rival Sequelize in robustness and TypeORM in type safety.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -42,9 +42,46 @@
     "type-safe",
     "database",
     "query-builder",
-    "sql"
+    "sql",
+    "relations",
+    "associations",
+    "migration",
+    "hooks",
+    "lifecycle",
+    "sequelize-like",
+    "typeorm-like",
+    "drizzle-like",
+    "mongodb-compatibility",
+    "analytics",
+    "olap",
+    "big-data",
+    "time-series",
+    "data-warehouse",
+    "column-store",
+    "batch-processing",
+    "streaming",
+    "aggregation",
+    "schema-validation",
+    "type-inference",
+    "fluent-api",
+    "production-ready",
+    "enterprise",
+    "node",
+    "javascript",
+    "ts",
+    "db",
+    "client",
+    "driver",
+    "connection-pooling",
+    "auto-migration",
+    "lazy-loading",
+    "eager-loading",
+    "sql-injection-prevention"
   ],
-  "author": "Fyutrex Team",
+  "author": {
+    "name": "Fyutrex Team",
+    "url": "https://github.com/fyutrex"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -53,7 +90,7 @@
   "bugs": {
     "url": "https://github.com/fyutrex/clickorm/issues"
   },
-  "homepage": "https://github.com/fyutrex/clickorm#readme",
+  "homepage": "https://clickorm.fyutrex.com/",
   "engines": {
     "node": ">=20.0.0"
   },
@@ -78,5 +115,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/fyutrex"
   }
 }
