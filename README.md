@@ -378,11 +378,7 @@ ClickORM is designed with security in mind:
 - ✅ Multiple build formats (ESM, CJS)
 - ✅ Structured logging with performance metrics
 
-<<<<<<< HEAD
 **Current Version: 1.0.8** - Production Ready 🚀
-=======
-**Current Version: 1.0.5** - Production Ready 🚀
->>>>>>> 7d1a6cd53eab7be0351661ed63a52eba6bc75d51
 
 ## 📝 License
 
