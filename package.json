@@ -53,7 +53,7 @@
   "bugs": {
     "url": "https://github.com/fyutrex/clickorm/issues"
   },
-  "homepage": "https://github.com/fyutrex/clickorm#readme",
+  "homepage": "https://clickorm.fyutrex.com/",
   "engines": {
     "node": ">=20.0.0"
   },

@@ -18,13 +18,13 @@ A production-grade, type-safe ORM for ClickHouse with full TypeScript support, d
 ## 📦 Installation
 
 ```bash
-npm install @clickorm/core @clickhouse/client
+npm install @fyutrex/clickorm @clickhouse/client
 ```
 
 ## 🎯 Quick Start
 
 ```typescript
-import { createClickORMClient, DataType } from '@clickorm/core';
+import { createClickORMClient, DataType } from '@fyutrex/clickorm';
 
 // Create client
 const orm = createClickORMClient({
@@ -75,7 +75,7 @@ const UserSchema = {
 } as const;
 
 // 2. Schema builder (fluent API)
-import { createSchema } from '@clickorm/core';
+import { createSchema } from '@fyutrex/clickorm';
 
 const User = createSchema()
   .uint('id', { primaryKey: true })
