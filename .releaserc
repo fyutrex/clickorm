@@ -1,0 +1,41 @@
+module.exports = {
+  branches: ['main'],
+
+  plugins: [
+    // Analyze commit messages (feat, fix, BREAKING)
+    '@semantic-release/commit-analyzer',
+
+    // Generate release notes
+    '@semantic-release/release-notes-generator',
+
+    // Create CHANGELOG.md
+    [
+      '@semantic-release/changelog',
+      {
+        changelogTitle: '# Changelog',
+        changelogFile: 'CHANGELOG.md',
+      },
+    ],
+
+    // Publish to npm using OIDC
+    [
+      '@semantic-release/npm',
+      {
+        npmPublish: true,
+        tarballDir: 'dist',
+      },
+    ],
+
+    // Commit package.json + CHANGELOG.md updates back to git
+    [
+      '@semantic-release/git',
+      {
+        assets: ['CHANGELOG.md', 'package.json'],
+        message: 'chore(release): ${nextRelease.version}\n\n${nextRelease.notes}',
+      },
+    ],
+
+    // Create GitHub Release
+    '@semantic-release/github',
+  ],
+};
